@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @AKULAVAISHNAVI
-- 👀 I’m interested in watching movies and anime 
+-  I’m a student
 - 🌱 I’m currently learning Python language
 - 📫 You can reach me through my email i.e, @vaishnaviakula2381@gmail.com
 
