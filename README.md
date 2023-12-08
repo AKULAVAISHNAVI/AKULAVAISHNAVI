@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @AKULAVAISHNAVI
--    I’m a student
+-    My field of study is engineering and I am studying data science.
 - 🌱 I’m currently learning Python language
 - 📫 You can reach me through my email i.e, @vaishnaviakula2381@gmail.com
 
