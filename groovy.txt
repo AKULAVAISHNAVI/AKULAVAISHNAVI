@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/<username>/ml-pipeline-cicd.git'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'pip install -r requirements.txt'
+            }
+        }
+
+        stage('Run Unit Tests') {
+            steps {
+                sh 'pytest tests/'
+            }
+        }
+
+        stage('Train Model') {
+            steps {
+                sh 'python src/train.py'
+            }
+        }
+
+        stage('Save Artifacts') {
+            steps {
+                archiveArtifacts artifacts: 'model/*.pkl', fingerprint: true
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed.'
+        }
+    }
+}
